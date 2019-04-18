@@ -1,0 +1,186 @@
+
+<!-- saved from url=(0036)https://cslinzhang.github.io/deepps/ -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-cn">
+
+<title>DeepMPV</title>
+
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif"}
+table.TableGrid
+	{border:1.0pt solid black;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	}
+-->
+</style>
+<meta http-equiv="Content-Language" content="zh-cn">
+
+<title>DeepPS</title>
+
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif"}
+table.TableGrid
+	{border:1.0pt solid black;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	}
+-->
+</style>
+<style type="text/css" abt="234"></style></head>
+
+
+
+<body>
+
+<table class="MsoNormalTable" border="0" cellpadding="0" width="1217" id="table3" height="35">
+	<tbody><tr>
+		<td valign="top" style="width: 1211px; height: 31px; padding: .75pt" align="left">
+		<p class="text">
+		<span lang="en-us"><font face="Calibri" size="5" color="#0000FF">
+		<b>Pay By Showing Your Palm: A Study Of Palmprint Verification On Mobile Platforms</b></font></span></p><p class="text">
+		<span lang="en-us"><font face="Calibri" size="4" color="#0000FF">
+		Yingyi Zhang<sup>1</sup>,&nbsp;Lin Zhang<sup>1</sup>,&nbsp;Shengjie Zhao</font></span><font face="Calibri" size="4" color="#0000FF"><sup>1</sup><span lang="en-us">,
+		Ying Shen</span><sup>1</sup><span lang="en-us">, and Yukai Yang</span><sup>2</sup></font></p><p class="text">
+		<span lang="en-us"><font face="Calibri" size="4" color="#0000FF"><sup>1</sup>School
+		of Software Engineering, Tongji University</font></span></p><p class="text">
+		<font face="Calibri" size="4" color="#0000FF"><sup>2</sup><span lang="en-us">Department of Statistics, Uppsala University</span></font></p></td>
+	</tr>
+	</tbody></table>
+<hr>
+<p><span lang="en-us"><b><font face="Calibri" size="5">Introduction</font></b></span></p>
+<p>
+<span style="font-size: 13pt; font-family: Calibri; color: windowtext" lang="EN-US">
+This is the website for our paper "<a href="https://cslinzhang.github.io/deepmpv/palmprint.pdf">Pay By Showing Your Palm: A Study Of Palmprint Verification On Mobile Platforms,ICME,2019</span></a>"</span></p>
+<hr>
+<p><span lang="en-us"><b><font face="Calibri" size="5">Tongji Mobile Palmprint Dataset</font></b></span></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt">
+<a href="https://pan.baidu.com/s/1UCRBvt67ije8PTIfpfYzdw">MPD</a></font></span></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt">MPD contains original palm
+image set and generated datasets. The sturcture of our dataset is like below: </font></span></p>
+<table border="1" width="70%">
+	<tbody><tr>
+		<td>
+		<p align="center"><b><font face="Calibri">Dataset Name</font></b></p></td>
+		<td>
+		<p align="center"><b><font face="Calibri">Description</font></b></p></td>
+		<td>
+		<p align="center"><b><font face="Calibri">Number of samples</font></b></p></td>
+		<td>
+		<p align="center"><b><font face="Calibri">File path</font></b></p></td>
+	</tr>
+	<tr>
+		<td>
+		<p align="center"><font face="Calibri">PalmSet</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">Original palm image set.</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">16000</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">MPD/original palms/</font></p></td>
+	</tr>
+	<tr>
+		<td>
+		<p align="center"><font face="Calibri">MPD<sub>D</sub></font></p></td>
+		<td width="260">
+		<p align="center"><font face="Calibri">Generated dataset for finger-gap-point detection, in VOC format.</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">259718</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">MPD/generation/1-finger_gap_point_detection/</font></p></td>
+	</tr>
+	<tr>
+		<td>
+		<p align="center"><font face="Calibri">clips</font></p></td>
+		<td width="260">
+		<p align="center"><font face="Calibri">Generated dataset of finger-gap-point pairs.</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">144288</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">MPD/generation/2-point_pair_classification/</font></p></td>
+	</tr>
+	<tr>
+		<td>
+		<p align="center"><font face="Calibri">dotPair</font></p></td>
+		<td width="260">
+		<p align="center"><font face="Calibri">Generated dataset for point-pair classification.</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">24048</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">MPD/generation/2-point_pair_classification/</font></p></td>
+	</tr>
+	<tr>
+		<td>
+		<p align="center"><font face="Calibri">ROI</font></p></td>
+		<td width="260">
+		<p align="center"><font face="Calibri">Generated dataset of palmprint verification.</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">16000</font></p></td>
+		<td>
+		<p align="center"><font face="Calibri">MPD/generation/3-ROI_verification/</font></p></td>
+	</tr>
+	</tbody></table>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"><b>PalmSet</b>: The images in
+original palm dataset were palm images from built-in camera of mobile phones (Huawei/Xiaomo).
+The palm images are collected by mobile phones in 2 periods with various background
+and lighting conditions. This dataset contains 16000 palmprint images from 200 sessions
+(400 different hands). 10 photos of one’s hand with each phones and each time period are
+preserved in this dataset. All palm images are labelled. Typical image samples contained
+in this dataset is shown below. </font></span></p>
+<p>
+<img border="0" src="images/samples.jpg" width="914"></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"><b>clips/dotPair</b>: for a
+given palm image, 12 point pair pattern will be generated. The example of 12 point pair
+pattern is shown below.</font></span></p>
+<p>
+<img border="0" src="images/point_pair.jpg" width="850"></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt"><b>ROI</b>: for a
+given palm image, a palmprint ROI image will be generated. The example ROI samples are shown below.</font></span></p>
+<p>
+<img border="0" src="images/roi.jpg" width="800"></p>
+<p align="left"><span lang="en-us"><font face="Calibri" style="font-size: 13pt">
+We have also developed a matlab labeling tool for labeling finger-gap-points on
+palm images, whose interface is shown in the image below. </font>
+</span></p>
+<p align="left"><img border="0" src="images/label_tool.png" width="687"></p>
+<p align="left"><font face="Calibri" style="font-size: 13pt">This labeling tool
+and the user instructions can be found here
+<a href="https://github.com/Teoge/MarkToolForParkingLotPoint">
+https://github.com/Teoge/MarkToolForParkingLotPoint</a>. </font></p>
+<hr>
+<p><span lang="en-us"><b><font face="Calibri" size="5">Source Codes</font></b></span></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt">Note: all these
+codes are implemented in Matlab and run on mac OSX. </font></span></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt">1.
+<a href="https://pan.baidu.com/s/1Y21g5MVZYZbiZ7o19E_OeA">MarkingPointAndGenerateDataset.zip</a></font></span></p>
+<p>
+<span lang="en-us"><font face="Calibri" style="font-size: 13pt">These codes can
+fulfill three tasks, generating annotations for finger-gap-point detection, generating
+images and annotations for point-pair-pattern classification and generating palmprint ROIs.</font></span></p>
+<hr>
+<p><span lang="en-us"><b><font face="Calibri" size="5">Demo Videos</font></b></span></p>
+<video src="SUPPLEMENTARY.mp4" width="600" height="450" controls="" preload=""></video>
+<hr>
+<p align="justify"><font face="Calibri">Last update: <span lang="en-us">Apri. 9,
+</span>201<span lang="en-us">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+
+</body></html>
